@@ -1,0 +1,16 @@
+# OSX annoying stuff
+.DS_Store
+
+# IDE and other configs
+.idea
+.envrc
+.monokle
+.terraform
+.terraform.lock.hcl
+.vscode
+.vscode/settings.json
+
+# Image buffers
+**/**.tar.gz
+**/**.pem
+**/target/**
