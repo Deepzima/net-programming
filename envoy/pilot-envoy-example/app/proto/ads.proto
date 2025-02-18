@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package envoy.service.discovery.v3;
+
+message DiscoveryRequest {
+  string version_info = 1;
+}
+
+message DiscoveryResponse {
+  string version_info = 1;
+  string nonce = 2;
+  string type_url = 3;
+}
+
+service AggregatedDiscoveryService {
+  rpc StreamAggregatedResources (stream DiscoveryRequest) returns (stream DiscoveryResponse);
+}
